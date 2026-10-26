@@ -1,0 +1,113 @@
+{
+  "schema": "creative-page-plan/1",
+  "example_notice": "创意页规划示例，不是comic_tool.py输入；不代表已生成，人物造型需先确定并制作人设图。",
+  "page_id": "pg-expressive-01",
+  "production_mode": "integrated",
+  "canvas_ratio": "3:4",
+  "story_beat": "咖啡馆门口，女主取出信封的那一瞬间，男主注意到她的来意。",
+  "reading_order": [
+    "p01",
+    "p02",
+    "p03"
+  ],
+  "panels": [
+    {
+      "id": "p01",
+      "shape": "slanted-quadrilateral",
+      "polygon_normalized": [
+        [
+          0.05,
+          0.12
+        ],
+        [
+          0.6,
+          0.12
+        ],
+        [
+          0.56,
+          0.68
+        ],
+        [
+          0.05,
+          0.75
+        ]
+      ],
+      "shot": "女主从门口走近吧台的中景",
+      "character_ids": [
+        "lin-xu"
+      ],
+      "layer": 10
+    },
+    {
+      "id": "p02",
+      "shape": "small-tilted-inset",
+      "polygon_normalized": [
+        [
+          0.64,
+          0.16
+        ],
+        [
+          0.94,
+          0.22
+        ],
+        [
+          0.9,
+          0.43
+        ],
+        [
+          0.61,
+          0.37
+        ]
+      ],
+      "shot": "她拿着的米白信封特写",
+      "layer": 20
+    },
+    {
+      "id": "p03",
+      "shape": "open-bottom-frame",
+      "area_normalized": [
+        0.12,
+        0.78,
+        0.8,
+        0.18
+      ],
+      "shot": "吧台内男主抬眼看向女主的近景，底边开放连接留白",
+      "character_ids": [
+        "zhou-yu"
+      ],
+      "layer": 10
+    }
+  ],
+  "breakout": {
+    "source_panel": "p01",
+    "character_id": "lin-xu",
+    "element": "同一人物肩部、右前臂与持信封的右手",
+    "crosses": "p01右侧斜边",
+    "extends_into": "页面中部留白，不侵入p02和p03的信息区",
+    "layer": 30,
+    "mask_rule": "遮住p01斜边的一小段，身体与框内躯干连贯；不能是第二只悬空手或复制的人物"
+  },
+  "protected_areas": [
+    "p02信封主体",
+    "p03男主面孔",
+    "从p01到p02再到p03的动线",
+    "所有气泡文字与尾巴"
+  ],
+  "prompt_spec": "3:4竖版，画面、分格及所有指定中文整页原生一体化。竖版真人写实漫画页，左侧斜切主格，右上倾斜信封嵌格，底部为开放边框反应格。女主肩部和持信封的右手自然越过左侧主格右斜边，进入中部留白，遮住该边框的一小段，保持躯干连接，且不盖住其他格的人脸和文字。人物面孔依据原始身份图、服装依据已确定且采用的人设图、咖啡馆依据场景设定图。不要把破格动作裁回矩形，也不要只把手贴在框外。",
+  "status": "planned",
+  "production_policy": {
+    "generation_unit": "whole_page",
+    "text_mode": "integrated",
+    "default_aspect_ratio": "3:4",
+    "explicit_user_ratio_overrides_default": true,
+    "allow_panel_stitching": false,
+    "allow_post_lettering": false,
+    "preserve_native_png": true,
+    "pdf": "unchanged_whole_pages_only",
+    "planning_gate": "Complete and review all outline, character arcs, chapter plots, page plans, panel storyboards and exact dialogue within the full agreed scope before any image production.",
+    "planning_complete": false,
+    "global_review_complete": false
+  },
+  "visible_text": [],
+  "visible_text_note": "本示例为无对白视觉节拍；实际故事如有对白须逐条加入整页Prompt，不能后期补字。"
+}

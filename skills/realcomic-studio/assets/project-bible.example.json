@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "project_id": "rain-before-close",
+  "title": "雨停之前",
+  "example_notice": "虚构示例；复制后替换为用户故事，不代表已生成人像或漫画。",
+  "visual_style": {
+    "medium": "真人摄影",
+    "capture": "自然纪实摄影",
+    "lighting": "傍晚窗外阴天散射光与吧台暖光",
+    "text_mode": "integrated",
+    "text_mode_note": "全页画面、分格、中文与气泡原生一体化；禁止逐格生图拼页及后期加字。本示例不授权真实图片调用。",
+    "reading_order": "ltr",
+    "canvas_ratio": "3:4"
+  },
+  "cast": [
+    {
+      "id": "lin-xu",
+      "name": "林序",
+      "identity": "原创角色，28岁女性；齐下颌黑色短发，脸部设定待本项目角色图实际锁定",
+      "invariants": [
+        "身份由原始图锚定，造型确定且人设图通过检查后再锁定"
+      ],
+      "allowed_changes": [
+        "表情",
+        "动作",
+        "景别"
+      ],
+      "wardrobe_proposal": "米白色圆领上衣、深灰直筒裤",
+      "wardrobe_confirmed": null,
+      "design_status": "pending_confirmation",
+      "user_confirmation": null,
+      "identity_references": [],
+      "character_sheets": []
+    },
+    {
+      "id": "zhou-yu",
+      "name": "周屿",
+      "identity": "原创角色，30岁男性；短黑发，脸部设定待本项目角色图实际锁定",
+      "invariants": [
+        "身份由原始图锚定，造型确定且人设图通过检查后再锁定"
+      ],
+      "allowed_changes": [
+        "表情",
+        "动作",
+        "景别"
+      ],
+      "wardrobe_proposal": "深蓝衬衫、棕色围裙",
+      "wardrobe_confirmed": null,
+      "design_status": "pending_confirmation",
+      "user_confirmation": null,
+      "identity_references": [],
+      "character_sheets": []
+    }
+  ],
+  "locations": [
+    {
+      "id": "cafe-01",
+      "description": "门口在画面左后方、吧台在画面右方；窗边下雨，柜门为暗绿色",
+      "references": [],
+      "story_function": "三格对白与信封道具动作的主要场景",
+      "spatial_anchors": [
+        "门在左后方",
+        "吧台在画面右方",
+        "吧台内侧暗绿柜门",
+        "窗边冷散射光"
+      ],
+      "visual_style": {
+        "materials": "木质吧台、玻璃窗、暗绿柜门",
+        "day_state": "阴雨傍晚",
+        "light": "窗外冷散射光与吧台暖光"
+      },
+      "scene_design_status": "planned",
+      "scene_sheets": [],
+      "adopted_version": null
+    }
+  ],
+  "props": [
+    {
+      "id": "letter-01",
+      "description": "未写字的米白色信封，内有一张旧车票"
+    },
+    {
+      "id": "towel-01",
+      "description": "吧台上的白色纸巾"
+    }
+  ],
+  "continuity": {
+    "actual": {
+      "through_chapter": null,
+      "adopted_version": null,
+      "state": null,
+      "note": "尚无已采用成品，下面仅为第一章计划"
+    },
+    "planned": {
+      "chapter_id": "ch01",
+      "state": {
+        "time": "周五傍晚，打烊前",
+        "location": "cafe-01",
+        "lin-xu": "站在吧台外，信封放在吧台，左手持取出的旧车票",
+        "zhou-yu": "吧台内，已用右手把一张白纸巾推到林序面前",
+        "knowledge": {
+          "lin-xu": "知道信封本来就寄给自己，看到旧车票",
+          "zhou-yu": "知道信封内的内容"
+        },
+        "open_threads": [
+          "旧车票对应哪次未完成的约定"
+        ]
+      }
+    },
+    "script": {
+      "through_chapter": null,
+      "adopted_version": null,
+      "state": null,
+      "note": "尚无已采用剧本。纯剧本续写依据这一层；漫画层仍独立记录实际已采用画面。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "ch01",
+      "plan": "story/ch01.json",
+      "status": "planned",
+      "adopted_exports": []
+    }
+  ],
+  "revision_log": [],
+  "image_generation": {
+    "provider": "builtin",
+    "tool": null,
+    "api_key_required": false,
+    "model_selection": "system-default"
+  },
+  "preproduction": {
+    "stage": "story_proposal",
+    "character_proposal_status": "pending_confirmation",
+    "character_sheets_status": "not_generated",
+    "scene_design_status": "planned",
+    "readiness_for_comic_pages": false,
+    "note": "先确定故事，再确定角色造型。当前故事与服装均为待确认提案，未生成人设图或场景图。",
+    "story_status": "pending_confirmation"
+  },
+  "story": {
+    "status": "pending_confirmation",
+    "synopsis": "咖啡馆打烊前，一封看似送错的信让两个人重新面对一段未完的约定。",
+    "tone": "克制、温暖、带一点悬念",
+    "central_conflict": "林序以为信封送错，周屿确认它本来就寄给她。",
+    "ending": "林序取出旧车票，选择等雨停，车票对应的往事留给后续。",
+    "user_confirmation": null,
+    "note": "虚构故事提案，不表示用户已接受。",
+    "scope": "current_chapter_proposal"
+  },
+  "narrative_plan": {
+    "form": "undecided",
+    "form_note": "依用户目标选择单页、短篇、闭合长篇或开放连载；本例不预设全书篇幅。",
+    "central_question": "这张旧车票会让两人如何面对未完的约定？",
+    "ending_direction": null,
+    "story_page_budget": {
+      "estimate": null,
+      "actual_adopted": 0
+    },
+    "packaging": {
+      "scope": "one_book_if_requested",
+      "cover_and_back_cover_count_as_story_pages": false,
+      "note": "完整册单独配置封面封底，不按章重复增加；开放连载不预造最终封底。"
+    },
+    "arcs": [],
+    "character_arcs": [],
+    "relationship_arcs": [],
+    "timeline": [],
+    "foreshadowing": [
+      {
+        "id": "ticket-promise",
+        "kind": "question",
+        "setup_plan": {
+          "chapter_id": "ch01",
+          "detail": "林序从信封中取出旧车票"
+        },
+        "payoff_plan": {
+          "chapter_id": null,
+          "purpose": "通过后续选择揭示旧约定的意义"
+        },
+        "script_record": {
+          "setup": null,
+          "payoff": null,
+          "status": "planned"
+        },
+        "comic_record": {
+          "setup": null,
+          "payoff": null,
+          "status": "planned"
+        }
+      }
+    ],
+    "decisions": [],
+    "note": "叙事索引按项目需要扩展；采用版本、知情及道具状态分别写入 continuity.script 与 continuity.actual。"
+  },
+  "resume": {
+    "stage": "story_proposal",
+    "current_arc_id": null,
+    "current_chapter_id": "ch01",
+    "adopted_script_ref": null,
+    "adopted_comic_ref": null,
+    "next_step": "先确定当前故事内容，再讨论适用角色造型；本例无已确认依据或已生成资源。"
+  },
+  "production_policy": {
+    "generation_unit": "whole_page",
+    "text_mode": "integrated",
+    "default_aspect_ratio": "3:4",
+    "explicit_user_ratio_overrides_default": true,
+    "allow_panel_stitching": false,
+    "allow_post_lettering": false,
+    "preserve_native_png": true,
+    "pdf": "unchanged_whole_pages_only",
+    "planning_gate": "Complete and review all outline, character arcs, chapter plots, page plans, panel storyboards and exact dialogue within the full agreed scope before any image production.",
+    "planning_complete": false,
+    "global_review_complete": false
+  }
+}

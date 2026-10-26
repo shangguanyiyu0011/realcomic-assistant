@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "name": "上官一羽"
+  },
+  "description": "真人漫画助手：先确定故事与角色造型，制作人设和场景设定，再创作含对白、异形分格和人物破格的连续漫画。默认使用当前宿主的内置图片能力。",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "capabilities": [],
+        "category": "Creativity",
+        "composerIcon": "./assets/icon.svg",
+        "defaultPrompt": [
+          "用真人漫画助手创作一本校园搞笑漫画，十页正文，先和我确定故事。",
+          "根据我的人物参考，先确认造型，再制作人设和场景设定。",
+          "继续已有漫画，保持人物、场景和道具连续性。"
+        ],
+        "developerName": "上官一羽",
+        "displayName": "真人漫画助手",
+        "logo": "./assets/icon.svg",
+        "longDescription": "将人物参考与故事制作成真人摄影质感漫画。先讨论故事，再确认角色服装、发型与配饰，制作新人设及主要场景设定后编排分镜。支持不等格、斜切、嵌格与有叙事作用的人物破格；正文默认无页眉小字，封面、正文、封底独立计页。默认使用当前宿主实际可用的内置图片模型，兼容有相应能力的Work、Dots与Codex，不依赖固定Windows路径或连接本地电脑。PDF与文件导出按当前宿主实际能力执行。",
+        "shortDescription": "先定故事与人设，再创作连续真人漫画"
+      },
+      "requires_local_executor": false
+    }
+  },
+  "keywords": [
+    "真人漫画",
+    "校园漫画",
+    "故事分镜",
+    "character-consistency",
+    "comic"
+  ],
+  "name": "realcomic-assistant",
+  "version": "1.5.0",
+  "license": "MIT",
+  "homepage": "https://github.com/shangguanyiyu0011/realcomic-assistant",
+  "repository": "https://github.com/shangguanyiyu0011/realcomic-assistant"
+}

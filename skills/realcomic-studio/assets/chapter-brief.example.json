@@ -1,0 +1,163 @@
+{
+  "example_notice": "纯虚构章节计划示例；所有情节、人物和页数仅用于说明字段，不代表用户已确认或已生成漫画。不是 comic_tool.py 的输入文件。",
+  "schema_version": 1,
+  "project_id": "example-paper-lantern",
+  "chapter_id": "ch02",
+  "chapter_title_internal": "被雨淋湿的纸灯",
+  "scope": {
+    "book_type": "closed_long_form",
+    "arc_id": "arc01",
+    "book_main_question": "两位旧友能否在灯会结束前修复共同制作的纸灯，并坦白当年误会？",
+    "arc_goal": "第一次发现旧误会与一张丢失的设计图有关",
+    "chapter_task": "主角尝试找回设计图，因隐瞒失误使纸灯受损，最后决定向同伴说出真相"
+  },
+  "planning_status": {
+    "story_basis": "fictional_example_only",
+    "script_status": "planned",
+    "adopted_script_version": null,
+    "image_status": "not_generated",
+    "adopted_comic_pages": [],
+    "chapter_export": null
+  },
+  "page_budget": {
+    "story_pages_estimate": [
+      12,
+      16
+    ],
+    "actual_adopted_story_pages": 0,
+    "packaging_scope": "full_book_only",
+    "chapter_cover_planned": false,
+    "chapter_back_cover_planned": false,
+    "note": "正文页数可随分镜调整；完整册封面和封底另行计数，不按章节自动相加。"
+  },
+  "entry": {
+    "time": "灯会前一天下午（计划）",
+    "place_id": "market-workshop",
+    "character_wants": {
+      "lan": "在同伴发现前找回设计图",
+      "mo": "按原样修好纸灯"
+    },
+    "actual_previous_chapter_ending_ref": null,
+    "actual_previous_chapter_ending_status": "unavailable_in_example",
+    "note": "纯剧本续写回看上章采用稿；漫画制作回看实际已采用画面及对应剧本。本例无真实前章，不能作为采用连续性依据。",
+    "adopted_script_ending_ref": null
+  },
+  "planned_exit": {
+    "time": "灯会前一晚（计划）",
+    "place_id": "market-workshop",
+    "event": "兰准备坦白设计图丢失，莫先发现纸灯浸湿",
+    "next_chapter_question": "两人会先救纸灯，还是先厘清设计图的去向？"
+  },
+  "actual_adopted_exit": null,
+  "character_arcs": [
+    {
+      "id": "lan",
+      "start_behavior": "独自掩盖失误",
+      "pressure_choice": "承认设计图丢失",
+      "planned_change": "开始让莫参与解决问题",
+      "actual_change": null
+    },
+    {
+      "id": "mo",
+      "start_behavior": "只按旧工序修灯",
+      "pressure_choice": "听完解释再决定是否继续合作",
+      "planned_change": "察觉自己也误读了旧事",
+      "actual_change": null
+    }
+  ],
+  "relationship_plan": {
+    "characters": [
+      "lan",
+      "mo"
+    ],
+    "entry": "相互猜疑但仍需合作（计划）",
+    "turn": "纸灯受损使隐瞒无法继续",
+    "planned_exit": "愿意谈论旧误会",
+    "actual_exit": null
+  },
+  "knowledge": {
+    "author_plan": [
+      "设计图实际在工坊旧柜中"
+    ],
+    "character_plan": {
+      "lan": [
+        "自己弄丢了设计图"
+      ],
+      "mo": []
+    },
+    "reader_from_adopted_comic": [],
+    "note": "作者计划、采用剧本的角色/读者知情、采用漫画的角色/读者知情分别记录，不互相覆盖。",
+    "reader_from_adopted_script": [],
+    "character_from_adopted_script": {},
+    "character_from_adopted_comic": {}
+  },
+  "foreshadowing": [
+    {
+      "id": "paper-stain",
+      "kind": "clue",
+      "setup_plan": {
+        "chapter_id": "ch02",
+        "story_page_estimate": 4,
+        "visible_detail": "旧柜把手上的蓝色纸浆"
+      },
+      "payoff_plan": {
+        "chapter_id": "ch04",
+        "purpose": "帮助两人找到设计图"
+      },
+      "script_record": {
+        "setup": null,
+        "payoff": null,
+        "status": "planned"
+      },
+      "comic_record": {
+        "setup": null,
+        "payoff": null,
+        "status": "planned"
+      }
+    }
+  ],
+  "page_plan": [
+    {
+      "page_id": "ch02-page01",
+      "purpose": "展示找图目标与同伴阻力",
+      "panel_count_estimate": 3,
+      "script_status": "planned",
+      "adopted_image": null
+    },
+    {
+      "page_id": "ch02-page02",
+      "purpose": "误操作使纸灯浸湿，问题升级",
+      "panel_count_estimate": 4,
+      "script_status": "planned",
+      "adopted_image": null
+    }
+  ],
+  "resources_to_load_for_production": {
+    "story_bible_ref": null,
+    "previous_adopted_pages": [],
+    "character_reference_ids": [
+      "lan",
+      "mo"
+    ],
+    "scene_reference_ids": [
+      "market-workshop"
+    ],
+    "source_status": "example_only_no_real_files"
+  },
+  "next_step": "先补全并审查本次整部/整卷确定范围内所有章节的完整页表、逐格分镜和对白，再进入人设、场景与整页图片阶段；本章示例不是全范围完成证据。",
+  "page_plan_complete": false,
+  "page_plan_note": "仅示范前两页的字段，不是完整的12至16页页表；其余页须按剧情展开后才能声称分镜完成。",
+  "production_policy": {
+    "generation_unit": "whole_page",
+    "text_mode": "integrated",
+    "default_aspect_ratio": "3:4",
+    "explicit_user_ratio_overrides_default": true,
+    "allow_panel_stitching": false,
+    "allow_post_lettering": false,
+    "preserve_native_png": true,
+    "pdf": "unchanged_whole_pages_only",
+    "planning_gate": "Complete and review all outline, character arcs, chapter plots, page plans, panel storyboards and exact dialogue within the full agreed scope before any image production.",
+    "planning_complete": false,
+    "global_review_complete": false
+  }
+}

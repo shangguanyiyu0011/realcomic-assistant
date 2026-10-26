@@ -1,0 +1,2 @@
+# Only for the legacy layout tool, not required for native image generation.
+Pillow

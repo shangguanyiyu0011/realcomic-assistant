@@ -1,0 +1,215 @@
+{
+  "schema_version": 2,
+  "title": "雨停之前 · 第一章",
+  "chapter_id": "ch01",
+  "example_notice": "虚构整页三格文本分镜，所有image为空代表未成图；非旧comic_tool.py输入，不得逐格生成或拼页。全范围文本通过审查后才能生图。",
+  "text_mode": "integrated",
+  "reading_order": "ltr",
+  "cast": [
+    {
+      "id": "lin-xu",
+      "name": "林序",
+      "identity": "原创角色，28岁女性；齐下颌黑色短发，脸部设定待本项目角色图实际锁定",
+      "references": [],
+      "invariants": [
+        "先确定故事造型，当前服装文字仅为提案"
+      ],
+      "allowed_changes": [
+        "表情",
+        "动作",
+        "景别"
+      ],
+      "wardrobe_proposal": "米白色圆领上衣、深灰直筒裤",
+      "wardrobe_confirmed": null,
+      "design_status": "pending_confirmation",
+      "character_sheets": []
+    },
+    {
+      "id": "zhou-yu",
+      "name": "周屿",
+      "identity": "原创角色，30岁男性；短黑发，脸部设定待本项目角色图实际锁定",
+      "references": [],
+      "invariants": [
+        "先确定故事造型，当前服装文字仅为提案"
+      ],
+      "allowed_changes": [
+        "表情",
+        "动作",
+        "景别"
+      ],
+      "wardrobe_proposal": "深蓝衬衫、棕色围裙",
+      "wardrobe_confirmed": null,
+      "design_status": "pending_confirmation",
+      "character_sheets": []
+    }
+  ],
+  "pages": [
+    {
+      "id": "pg01",
+      "width": 1200,
+      "height": 1600,
+      "background": "#F5F1E8",
+      "panels": [
+        {
+          "id": "ch01-p001",
+          "purpose": "建立空间与来意",
+          "shot": "全景，从门口一侧平视吧台，林序画面左、周屿画面右",
+          "state_in": "傍晚下雨；周屿在吧台内；林序刚走到吧台前，右手持未开封信封",
+          "state_delta": "林序抬起信封让周屿看见",
+          "state_out": "两人隔着吧台对视；信封仍未打开，仍在林序右手",
+          "prompt": "整页中的本格文字分镜（非独立图片请求）：林序的身份图仅用于林序，周屿的身份图仅用于周屿；执行时按实际上传顺序逐张注明，缺图时不得声称已锁脸。阴雨傍晚的咖啡馆，门在左后方，吧台在右方，柜门暗绿色。穿米白圆领上衣和深灰裤的短发林序站在左侧吧台外，右手抬起米白色无字信封；穿深蓝衬衫棕色围裙的短发周屿站在右侧吧台内看信封。门口一侧可实现的平视全景，窗外冷散射光、吧台暖光，自然皮肤和真实材质。左上与右下安排本格指定原生中文气泡。",
+          "order": 1,
+          "status": "planned",
+          "characters": [
+            "lin-xu",
+            "zhou-yu"
+          ],
+          "location_id": "cafe-01",
+          "reference_inputs": [],
+          "adopted_version": null,
+          "visible_text": [
+            {
+              "type": "caption",
+              "speaker": "narrator",
+              "text": "周五，打烊前十分钟。",
+              "box": [
+                0.035,
+                0.04,
+                0.4,
+                0.15
+              ]
+            },
+            {
+              "type": "speech",
+              "speaker": "lin-xu",
+              "text": "这封信，你放错了。",
+              "box": [
+                0.04,
+                0.64,
+                0.4,
+                0.19
+              ],
+              "tail": [
+                0.3,
+                0.48
+              ]
+            }
+          ],
+          "image_reference_note": "采用图片引用所属整页版本；本格不生成独立文件。"
+        },
+        {
+          "id": "ch01-p002",
+          "purpose": "制造反转，确认信封收件人",
+          "shot": "周屿中近景，机位仍在吧台外，周屿视线朝画面左侧",
+          "state_in": "信封在林序右手，未打开；周屿在吧台内",
+          "state_delta": "周屿朝信封点头，回答林序",
+          "state_out": "信封未打开；林序得知信封并没有寄错",
+          "prompt": "整页中的本格文字分镜（非独立图片请求）：按真实参考顺序固定周屿身份及深蓝衬衫、棕色围裙，不混入其他人物脸。延续同一阴雨傍晚咖啡馆，暗绿柜门在周屿身后，窗外冷散射光与吧台暖光保持一致。周屿在吧台内的中近景，从吧台外平视，他轻轻朝画面左下方林序右手中的米白信封点头，视线朝画面左；林序可仅在左前景出现模糊肩部。真实自然表演和皮肤，右上安排指定原生中文气泡；不要打开信封，不要增加新道具。",
+          "order": 2,
+          "status": "planned",
+          "characters": [
+            "lin-xu",
+            "zhou-yu"
+          ],
+          "location_id": "cafe-01",
+          "reference_inputs": [],
+          "adopted_version": null,
+          "visible_text": [
+            {
+              "type": "speech",
+              "speaker": "zhou-yu",
+              "text": "名字没写错。",
+              "box": [
+                0.58,
+                0.06,
+                0.37,
+                0.2
+              ],
+              "tail": [
+                0.68,
+                0.44
+              ]
+            }
+          ],
+          "image_reference_note": "采用图片引用所属整页版本；本格不生成独立文件。"
+        },
+        {
+          "id": "ch01-p003",
+          "purpose": "以物件揭示过去并留下续章钩子",
+          "shot": "吧台外斜侧中景，保持林序左、周屿右，车票可辨形状但无可读小字",
+          "state_in": "林序已得知信封寄给自己，信封仍未打开",
+          "state_delta": "镜头前的动作间隙中林序拆开信封放在吧台，左手取出票；周屿用右手推来纸巾",
+          "state_out": "林序左手拿旧车票，米白信封放在吧台；周屿右手停在推来的纸巾旁；两人留在咖啡馆",
+          "prompt": "整页中的本格文字分镜（非独立图片请求）：按实际上传顺序锁定林序与周屿的身份，林序齐下颌黑短发、米白圆领上衣，周屿短黑发、深蓝衬衫棕色围裙。仍在阴雨傍晚咖啡馆的吧台两侧，林序左、周屿右；这格表现动作完成后的一个瞬间：已拆开的米白信封平放吧台，林序用左手持一张旧车票低头看，周屿的右手停在刚推到她面前的一张白纸巾旁。吧台外斜侧中景，窗外冷光与吧台暖光延续，真实皮肤和纸张材质，车票无可读小字。左上安排指定原生中文气泡，不把多个动作画成分身。",
+          "order": 3,
+          "status": "planned",
+          "characters": [
+            "lin-xu",
+            "zhou-yu"
+          ],
+          "location_id": "cafe-01",
+          "reference_inputs": [],
+          "adopted_version": null,
+          "visible_text": [
+            {
+              "type": "speech",
+              "speaker": "lin-xu",
+              "text": "那就等雨停。",
+              "box": [
+                0.035,
+                0.05,
+                0.4,
+                0.19
+              ],
+              "tail": [
+                0.3,
+                0.42
+              ]
+            }
+          ],
+          "image_reference_note": "采用图片引用所属整页版本；本格不生成独立文件。"
+        }
+      ],
+      "layout": {
+        "description": "上方横向场景格，下方左右两幅竖格；本例仅演示三格布局，不是全章固定模板。",
+        "panel_count": 3,
+        "reading_order": [
+          "ch01-p001",
+          "ch01-p002",
+          "ch01-p003"
+        ],
+        "main_panel": "ch01-p001"
+      },
+      "canvas_ratio": "3:4",
+      "image": null,
+      "status": "planned",
+      "native_dimensions": null,
+      "reference_inputs": [],
+      "prompt": "完整3:4竖版真人摄影漫画正文页，按以下panels的文本分镜和visible_text一次原生生成全部画面、分格及中文气泡；布局上方主格、下方左右不等宽格，准确保持每格人物状态；正文无页眉/书名/页号/格ID。禁止逐格独立生图、拼页及后期加字。"
+    }
+  ],
+  "requested_generation": {
+    "provider": "builtin",
+    "tool": null,
+    "model_selection": "system-default"
+  },
+  "preproduction": {
+    "project_bible": "project-bible.example.json",
+    "readiness_for_comic_pages": false,
+    "reason": "本示例故事与角色造型尚未确定，人设图与场景图尚未制作，当前仅为提案示例。且本次完整范围全量分镜及全局审查未完成。"
+  },
+  "production_policy": {
+    "generation_unit": "whole_page",
+    "text_mode": "integrated",
+    "default_aspect_ratio": "3:4",
+    "explicit_user_ratio_overrides_default": true,
+    "allow_panel_stitching": false,
+    "allow_post_lettering": false,
+    "preserve_native_png": true,
+    "pdf": "unchanged_whole_pages_only",
+    "planning_gate": "Complete and review all outline, character arcs, chapter plots, page plans, panel storyboards and exact dialogue within the full agreed scope before any image production.",
+    "planning_complete": false,
+    "global_review_complete": false
+  },
+  "schema": "integrated-comic-plan/2"
+}

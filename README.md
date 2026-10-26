@@ -1,2 +1,101 @@
-# realcomic-assistant
-Photo-real comic assistant: story planning, character consistency and native full-page comics.
+# 真人漫画助手 · RealComic Assistant
+
+将人物参考和故事制作成真人摄影质感的连续漫画。支持单页、短篇、百页长篇与开放连载；当前版本 **1.5.0**。
+
+这是可复用的 AI 技能与插件源码。实际生图、看图和文件导出由运行它的宿主提供，仓库本身不包含图片生成服务或 API 密钥。
+
+## 工作方式
+
+1. 先讨论并确定故事内容、基调和篇幅。
+2. 完成本次确定范围内的全部剧情、人物弧、页表、逐格分镜与对白，汇总审查。
+3. 根据人物参考确定造型，制作故事专用人设图与关键场景设定。
+4. 按页原生一体化生成画面、分格与中文，逐页检查；默认3:4竖版。
+5. 追踪采用版本、人物知情、道具、关系和伏笔，支持续章及局部修订。
+
+已有明确方案和授权会持续沿用，分章制作不会自动增加逐章或逐页审批。
+
+## 能力与约定
+
+- 按整部故事 → 篇章/卷 → 章节 → 页 → 格逐层规划；本次确定制作范围内的文本先全部完成，再进入图片阶段。开放连载不要求规划无限未来。
+- 加强人物动机、成长、场景因果、潜台词和喜剧节奏。
+- 支持错落分格、斜切、嵌格与有叙事作用的人物破格，保持清楚的阅读顺序。
+- 正文默认没有书名页眉、小标题和印刷页码；封面与封底不占正文页数。
+- 剧本采用进度与漫画成图进度分别保存，避免未成图剧情混入漫画实际状态。
+- 默认使用当前宿主提供的内置生图/改图能力，不写死模型，也不自动切换付费外部 API。
+- 正式页整页原生一体化生成，禁止逐格生图再拼页及后期叠字；局部修改也输入、交付完整页面。
+- 保留原生 PNG；PDF 仅按页序无改动封装，不裁切、拉伸、补边或降采样。
+- 主要用法是安装到 ChatGPT 网页版的插件，然后使用 Dots 调用；Codex 也可以使用。其他 Agent 尚未测试，不承诺兼容。
+
+## 安装与使用
+
+[下载源码或发布包](https://github.com/shangguanyiyu0011/realcomic-assistant/releases) · [浏览技能入口](skills/realcomic-studio/SKILL.md)
+
+### 主要用法：网页版安装，再用 Dots 调用
+
+1. 从本仓库的 Releases 下载插件 ZIP 安装包。
+2. 在 ChatGPT 网页版的插件管理/创建入口，按账号实际提供的导入功能上传并安装该插件。
+3. 确认“真人漫画助手”在同一账号中已安装并启用。
+4. 打开 Dots，对它说“用真人漫画助手……”并描述你的故事或制作任务；人物参考图在创作会话中提供。
+
+网页入口和导入权限以当前账号界面为准。GitHub 发布不等于插件已上架 ChatGPT 公共插件目录，也不会自动给其他账号安装或启用。
+
+### Codex 使用
+
+Codex 也可以使用该插件。若使用本地技能方式，把 `skills/realcomic-studio` 整个目录复制到 Codex 用户技能目录 `~/.codex/skills/` 或项目的 `.agents/skills/`，再选择“真人漫画助手”或输入 `$realcomic-studio` 调用。
+
+**其他 Agent 尚未测试。** 仓库不对它们的导入、调用、生图或文件导出能力作兼容承诺。
+
+### 示例请求
+
+```text
+用真人漫画助手策划《恋爱日记》，大学校园搞笑恋爱，正文暂定150页。
+先给整部主线、人物成长和篇章规划，暂时不生图。
+```
+
+```text
+根据这两张人物参考，先和我确定故事及角色造型，再制作新人设图。
+```
+
+```text
+继续第三章，先给分镜。分别核对采用剧本和已采用漫画的结尾，
+沿用相关人物、场景与道具；版式随剧情变化。
+```
+
+## 历史排版脚本
+
+`scripts/comic_tool.py` 与矩形排版示例保留用于理解旧版本及历史格式，依赖 Python 3.10+ 与 Pillow，均不是新漫画页的制作路径。**新页禁止使用它拼格、加字、补气泡或裁切。** 当前工作流见技能入口与 `references/image-production.md`。
+
+## 文件结构
+
+```text
+plugin.json                         插件清单
+.codex-plugin/plugin.json           兼容清单
+assets/icon.svg                     插件图标
+skills/realcomic-studio/
+  SKILL.md                          工作流入口
+  agents/openai.yaml                技能界面元数据
+  references/                       故事、长篇、前期设定、制作与排版指南
+  assets/                           虚构项目、章节和创意页示例
+  scripts/comic_tool.py              历史排版工具
+```
+
+## 验证与限制
+
+本次公开包检查了插件清单、JSON、技能入口与本地资源链接。新版整页规划示例不是历史排版脚本的输入文件。既往 v1.4.0 曾完成七组独立文本模拟，覆盖百页策划、开放连载、剧本/漫画不同进度续写、整册计页、确认范围与旧章修订；这些结果不等于 v1.5.0 全流程成图验证。
+
+尚未实测连续生成整部百页漫画，也不保证所有宿主的图片或文件工具都可用。实际人物一致性、中文准确性、异形破格、原生比例及 PDF 像素保真仍须看图与文件验收。
+
+请只使用有权使用和发布的人物照片、故事及素材。仓库不包含用户人像、实际漫画页、私人会话记录或凭据。
+
+## 方法参考
+
+编剧指南吸收了以下公开项目的结构思路，使用本仓库不依赖安装它们；具体参考链接见相应指南：
+
+- [Yunshiro/yunn-skills](https://github.com/Yunshiro/yunn-skills)
+- [liuxiao20051106-prog/novel-writer-skill](https://github.com/liuxiao20051106-prog/novel-writer-skill)
+- [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)
+- [danjdewhurst/story-skills](https://github.com/danjdewhurst/story-skills)
+
+## 许可证
+
+[MIT](LICENSE) · Copyright (c) 2026 上官一羽
